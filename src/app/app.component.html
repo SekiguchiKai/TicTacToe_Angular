@@ -18,10 +18,10 @@
     </tr>
   </table>-->
   <table>
-    <tr *ngFor="let row of gameBoard">
-      <td> {{row.row1}}</td>
-      <td> {{row.row2}}</td>
-      <td> {{row.row3}}</td>
+    <tr *ngFor="let row of gameBoard; let idx = index;">
+      <td id="{{idx}}" (click)="clicked(idx)"> {{row.row1}}</td>
+      <td id="{{3 + idx}}" (click)="clicked(3 + idx)"> {{row.row2}}</td>
+      <td id="{{6 + idx}}" (click)="clicked(6 + idx)"> {{row.row3}}</td>
     </tr>
   </table>
 

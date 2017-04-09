@@ -26,17 +26,18 @@ export class AppComponent implements OnInit {
 
   // }
 
-  // clicked(idStr: string) {
-  //   // $event.targetでHTMLInputElementを取得
-  //   //  event.target.value;
-  //   const id = Number(idStr);
-  //   const cellMove = this.board.getMove(id);
+  clicked(idStr: string) {
+    console.log(`idは${idStr}`)
+    //   // $event.targetでHTMLInputElementを取得
+    //   //  event.target.value;
+    //   const id = Number(idStr);
+    //   const cellMove = this.board.getMove(id);
 
-  //   if (cellMove === MOVE.EMPTY) {
-  //     this.board.putMove(id, MOVE.CIRCLE);
-  //     window.alert('aaaaaa');
-  //   }
-  // }
+    //   if (cellMove === MOVE.EMPTY) {
+    //     this.board.putMove(id, MOVE.CIRCLE);
+    //     window.alert('aaaaaa');
+    //   }
+  }
 
   ngOnInit() {
     this.judge.judgeResult(this.board);
