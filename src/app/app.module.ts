@@ -4,18 +4,24 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import { BoardComponent } from './board.component';
+import { AppComponent } from './app.component';
+import { BoardService } from './service/board.service';
+import { CpuService } from './service/cpu.service';
+import { JudgeService } from './service/judge.service';
+import { MiniMaxService } from './service/minimax.service';
+import { ScoreCalculatorService } from './service/scorecalculator.service';
 
 @NgModule({
   declarations: [
-    BoardComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
-  bootstrap: [BoardComponent]
+  providers: [BoardService, CpuService, JudgeService, MiniMaxService, ScoreCalculatorService],
+  // providers: [BoardService, JudgeService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

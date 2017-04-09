@@ -5,21 +5,24 @@
   <p>縦、横、斜めのいずれかの3つの連続するマス目に自分の手を置いた方が勝ちです</p>
 </header>
 <article>
-  <table id="table">
-    <tr>
-      <td id="0-0"></td>
-      <td id="0-1"></td>
-      <td id="0-2"></td>
+  <!--<table>
+    <tr *ngFor="let cell of row1; let idx = index;">
+      <td id="{{idx}}" (click)="clicked(idx)">{{cell}}}</td>
     </tr>
-    <tr>
-      <td id="1-0"></td>
-      <td id="1-1"></td>
-      <td id="1-2"></td>
+    <tr *ngFor="let cell of row2; let idx = index;">
+      <td id="{{3 + idx}}" (click)="clicked(3 + idx)">{{cell}}}</td>
     </tr>
-    <tr>
-      <td id="2-0"></td>
-      <td id="2-1"></td>
-      <td id="2-2"></td>
+
+    <tr *ngFor=" let cell of row3; let idx = index;">
+      <td id="{{6 + idx}} " (click)="clicked(6 + idx)">{{cell}}}</td>
+    </tr>
+  </table>-->
+  <table>
+    <tr *ngFor="let row of gameBoard">
+      <td> {{row.row1}}</td>
+      <td> {{row.row2}}</td>
+      <td> {{row.row3}}</td>
     </tr>
   </table>
+
 </article>
